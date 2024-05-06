@@ -1,0 +1,57 @@
+---
+title: 'Events registry'
+description: 'Description of your new file.'
+---
+
+<Tabs>
+  <Tab title="Level 1 (Metadata)">
+    ```
+    interface RandomEvent {
+    category: "claim-source";
+    fieldIncludingPII: string;
+    field1: string;
+    field2: string;
+    timestamp: number;
+    type: string;
+    version: "1";
+    }
+    ```
+  </Tab>
+  <Tab title="Level 2 (Non-sensitive data)">
+    ```
+    interface RandomEvent {
+    category: "claim-source";
+    data: {
+        error: {
+            message: string;
+            type: string;
+        };
+    };
+    field1: string;
+    field2: string;
+    timestamp: number;
+    type: string;
+    version: "1";
+    }
+    ```
+  </Tab>
+  <Tab title="Level 3 (Full data)">
+    ```
+    interface RandomEvent {
+    category: "claim-source";
+    data: {
+        error: {
+            message: string;
+            type: string;
+        };
+    };
+    fieldIncludingPII: string;
+    field1: string;
+    field2: string;
+    timestamp: number;
+    type: string;
+    version: "1";
+    }
+    ```
+  </Tab>
+</Tabs>
