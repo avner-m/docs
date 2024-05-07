@@ -4,6 +4,7 @@ title: 'Events registry'
 
 <Tabs>
   <Tab title="Level 1 (Metadata)">
+  **Event structure**
     ```
     interface RandomEvent {
     category: "claim-source";
@@ -15,8 +16,17 @@ title: 'Events registry'
     version: "1";
     }
     ```
+  **Excluded elements**
+  ```
+  data: {
+    error: {
+      message: string;
+      type: string;
+      };
+  ```
   </Tab>
   <Tab title="Level 2 (Non-sensitive data)">
+  **Event structure**
     ```
     interface RandomEvent {
     category: "claim-source";
@@ -32,6 +42,10 @@ title: 'Events registry'
     type: string;
     version: "1";
     }
+    ```
+  **Excluded elements**
+    ```
+    fieldIncludingPII: string;
     ```
   </Tab>
   <Tab title="Level 3 (Full data)">
