@@ -21,6 +21,7 @@
       "url": "mailto:hi@mintlify.com"
     }
   ],
+  "openapi": ["/openapi.yml"],
   "topbarCtaButton": {
     "name": "Dashboard",
     "url": "https://dashboard.mintlify.com"
@@ -75,11 +76,37 @@
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Issuance",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        {
+          "group": "Direct",
+          "pages": ["api-reference/endpoint/get"]
+        },
+        {
+          "group": "OpenID4VCI",
+          "pages": ["api-reference/endpoint/create"]
+        },
+        {
+          "group": "Verification",
+          "pages": ["api-reference/endpoint/delete"]
+        }
+      ]
+    },
+    {
+      "group": "Verification",
+      "pages": [
+        {
+          "group": "Direct",
+          "pages": ["api-reference/endpoint/get"]
+        },
+        {
+          "group": "OpenID4VP",
+          "pages": ["api-reference/endpoint/create"]
+        },
+        {
+          "group": "Verification",
+          "pages": ["api-reference/endpoint/delete"]
+        }
       ]
     }
   ],
